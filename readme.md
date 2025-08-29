@@ -88,9 +88,10 @@ Variables:
 ## Finite Volume Formulation
 ### Formulation
 The finite volume formulation without source terms in semi-discrete form is given by:
+
 $$
 \begin{equation*}
-	\frac{d}{dt} \int_{\Omega} U\ dV + \int_{\partial \Omega}\ F\ d\textbf{S} = 0
+	\frac{d}{dt} \int\_{\Omega} U\ dV + \int\_{\partial \Omega}\ F\ d\textbf{S} = 0
 \end{equation*}
 $$
 
@@ -189,9 +190,11 @@ Density follows from the ideal gas law $\rho = p/(RT)$, and velocity from the Ma
 
 ### Outlet (Fixed Pressure)
 At the outlet, density and velocity are extrapolated from the interior, while a fixed static pressure condition is imposed:
+
 $$
-p = p_{atm}.
+p = p_{atm}
 $$
+
 The total energy $E$ is recomputed accordingly to maintain consistency.
 
 
@@ -214,7 +217,7 @@ To validate the solver, the results have been compared with those presented in *
 Overall, the solver reproduces the reference trends:  
 - For $M_{\infty} = 0.01, 0.1, 0.7$, the local Mach number distributions agree well with literature.  
 - For $M_{\infty} = 0.7$, the shock induced by the bump is clearly captured at the expected location.  
-- A discrepancy appears at $M_{\infty} = 0.05$, where our simulation predicts a slightly higher Mach range than the reference.  
+- A discrepancy appears at $M_{\infty} = 0.05$, where the simulation predicts a slightly higher Mach range than the reference.  
 
 <figure align="center">
   <img src="examples/mach_study_mach_number.png" width="600">
